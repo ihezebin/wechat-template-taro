@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./",
   "projectname": "wechat-template-taro",
-  "description": "河泽冰博客",
+  "description": "",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,

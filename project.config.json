@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "dist/",
   "projectname": "wechat-template-taro",
-  "description": "河泽冰博客",
+  "description": "",
   "appid": "wxc1b4b8a29f8568dd",
   "setting": {
     "urlCheck": true,
@@ -9,7 +9,7 @@
     "enhance": true,
     "compileHotReLoad": false,
     "postcss": false,
-    "minified": false,
+    "minified": true,
     "compileWorklet": false,
     "uglifyFileName": false,
     "uploadWithSourceMap": true,
@@ -21,8 +21,8 @@
     "disableUseStrict": false,
     "useCompilerPlugins": false,
     "condition": false,
-    "swc": false,
-    "disableSWC": true,
+    "swc": true,
+    "disableSWC": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],

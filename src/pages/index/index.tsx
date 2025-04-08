@@ -1,5 +1,5 @@
 import { Switch, View } from '@tarojs/components'
-import { Button, ConfigProvider } from '@nutui/nutui-react-taro'
+import { Button, WaterMark } from '@nutui/nutui-react-taro'
 import './index.scss'
 import Taro, { usePullDownRefresh } from '@tarojs/taro'
 import React, { useEffect } from 'react'
@@ -28,26 +28,25 @@ const Index = () => {
   })
 
   return (
-    <ConfigProvider>
-      <View className="nutui-react-demo">
-        <View className="index">欢迎使用 NutUI React 开发 Taro 多端项目。</View>
-        <View className="index">
-          <Button
-            fill="dashed"
-            type="primary"
-            className="btn"
-            onClick={() => {
-              Taro.navigateTo({
-                url: '/pages/my/my?id=2&type=test',
-              })
-              console.log('navigateTo')
-            }}>
-            NutUI React Button
-          </Button>
-          <Switch defaultChecked />
-        </View>
+    <View className="nutui-react-demo">
+      <View className="index">欢迎使用 NutUI React 开发 Taro 多端项目。</View>
+      <View className="index">
+        <Button
+          fill="dashed"
+          type="primary"
+          className="btn"
+          onClick={() => {
+            Taro.navigateTo({
+              url: '/pages/my/my?id=2&type=test',
+            })
+            console.log('navigateTo')
+          }}>
+          NutUI React Button
+        </Button>
+        <Switch defaultChecked />
       </View>
-    </ConfigProvider>
+      <WaterMark content="xxx" />
+    </View>
   )
 }
 
