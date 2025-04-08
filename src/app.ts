@@ -3,7 +3,7 @@ import { useDidShow, useDidHide, useLaunch, useError } from '@tarojs/taro'
 // 全局样式
 import './app.scss'
 
-function App(props) {
+const App = (props) => {
   // 可以使用所有的 React Hooks
   useEffect(() => {
     // todo
