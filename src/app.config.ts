@@ -3,9 +3,9 @@ export default defineAppConfig({
   pages: ['layout/layout'],
   // pages: ['pages/index/index', 'pages/logs/logs', 'pages/my/my'],
   window: {
+    navigationBarTitleText: 'wechat-template-taro',
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black',
     enablePullDownRefresh: true, // 开启下拉刷新
   },
