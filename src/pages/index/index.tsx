@@ -1,5 +1,5 @@
 import { Switch, View } from '@tarojs/components'
-import { Button, WaterMark } from '@nutui/nutui-react-taro'
+import { Button } from '@nutui/nutui-react-taro'
 import './index.scss'
 import Taro, { usePullDownRefresh } from '@tarojs/taro'
 import React, { useEffect } from 'react'
@@ -45,7 +45,6 @@ const Index = () => {
         </Button>
         <Switch defaultChecked />
       </View>
-      <WaterMark content="xxx" />
     </View>
   )
 }

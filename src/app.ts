@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useDidShow, useDidHide, useLaunch, useError } from '@tarojs/taro'
 // 全局样式
 import './app.scss'
+import './assets/iconfont/iconfont.css'
 
 const App = (props) => {
   // 可以使用所有的 React Hooks

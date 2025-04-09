@@ -1,0 +1,46 @@
+@use "variable" as *;
+
+@mixin default {
+  --font-family: #{$font-family};
+  --font-size: #{$font-size-14};
+  --text-color: #{$title-color};
+  --background-color: #{$background-color-lightgray};
+  --content-background-color: #{$background-color-white};
+
+  --subtitle-color: #{$subtitle-color};
+
+  --link-hover-color: #{$link-hover-color-blue};
+  --link-hover-color-another: #{$link-hover-color-green};
+
+  --scrollbar-color: #{$scrollbar-color};
+  --scrollbar-hover-color: #{$scrollbar-hover-color};
+
+  --footer-text-color: rgba(88, 101, 119, 0.7);
+  --btn-disabled-color: rgba(0, 0, 0, 0.25);
+}
+
+@mixin theme-dark {
+  --text-color: #{$title-color-reverse};
+  --background-color: #252d38;
+  --content-background-color: #202325;
+
+  --subtitle-color: #{$subtitle-color-reverse};
+
+  --scrollbar-color: #{$scrollbar-color-reverse};
+  --scrollbar-hover-color: #{$scrollbar-hover-color-reverse};
+
+  --footer-text-color: #{$text-color-reverse-lighter};
+  --btn-disabled-color: #6e6e6e;
+
+  :global(.ant-btn-disabled), :global(:disabled) {
+    color: #6e6e6e;
+  }
+}
+
+html[theme="dark"] {
+  @include theme-dark
+}
+
+:root {
+  @include default
+}
