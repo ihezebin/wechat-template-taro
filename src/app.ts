@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 import { useDidShow, useDidHide, useLaunch, useError } from '@tarojs/taro'
 // 全局样式
-import './app.scss'
+import '@nutui/nutui-react-taro/dist/styles/themes/default.css'
 import './assets/iconfont/iconfont.css'
+import './app.scss'
 
 const App = (props) => {
   // 可以使用所有的 React Hooks

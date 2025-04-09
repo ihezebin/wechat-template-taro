@@ -1,9 +1,9 @@
-import enUS from '@nutui/nutui-react-taro/dist/locales/en-US'
-import zhCN from '@nutui/nutui-react-taro/dist/locales/zh-CN'
+import enUS from '@nutui/nutui-react-taro/dist/es/locales/en-US'
+import zhCN from '@nutui/nutui-react-taro/dist/es/locales/zh-CN'
 import { ConfigProvider } from '@nutui/nutui-react-taro'
-
+import type { NutCSSVariables } from '@nutui/nutui-react-taro'
 const createWithConfigProvider = (Component: React.ComponentType) => {
-  const themeConfig = {
+  const themeConfig: Record<string | NutCSSVariables, string> = {
     nutuiColorPrimary: '#30a9de',
     nutuiColorPrimaryStop1: '#30a9de',
     nutuiColorPrimaryStop2: 'rgb(22, 119, 255)',
