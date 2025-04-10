@@ -32,6 +32,12 @@ const config = {
     prebundle: { enable: false },
   },
   mini: {
+    webpackChain(chain) {
+      chain.plugin('miniCssExtractPlugin').tap((args) => {
+        args[0].ignoreOrder = true
+        return args
+      })
+    },
     postcss: {
       pxtransform: {
         enable: true,
