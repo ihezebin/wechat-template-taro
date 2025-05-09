@@ -1,5 +1,6 @@
-import { View } from '@tarojs/components'
 import { Component, ComponentType } from 'react'
+
+import Error from '../pages/error/error'
 
 const createErrorBoundary = (Page: ComponentType) => {
   return class ErrorBoundary extends Component {
@@ -20,11 +21,7 @@ const createErrorBoundary = (Page: ComponentType) => {
     }
 
     render() {
-      return this.state.hasError ? (
-        <View>Something went wrong: {JSON.stringify(this.state.error)}</View>
-      ) : (
-        <Page />
-      )
+      return this.state.hasError ? <Error error={this.state.error} /> : <Page />
     }
   }
 }
