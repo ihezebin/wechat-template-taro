@@ -1,7 +1,6 @@
 import { useLaunch, useError } from '@tarojs/taro'
 
 // 全局样式
-import './assets/iconfont/iconfont.css'
 import './app.scss'
 
 const App = ({ children }) => {

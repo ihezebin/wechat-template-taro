@@ -13,4 +13,5 @@ build
 .eslintrc.js
 
 src/setupProxy.js
+src/assets
 

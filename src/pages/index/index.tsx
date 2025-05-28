@@ -1,11 +1,13 @@
 import { View, Button } from '@tarojs/components'
 import Taro, { usePullDownRefresh } from '@tarojs/taro'
 import { Button as TaroifyButton } from '@taroify/core'
+import { SmileCommentOutlined } from '@taroify/icons'
 import React, { useEffect } from 'react'
 
 import api from '../../api'
 import { useStore } from '../../store'
 import createErrorBoundary from '../../utils/createErrorBoundary'
+import IconFont from '../../components/IconFont'
 
 import styles from './index.module.scss'
 
@@ -43,6 +45,8 @@ const Index = () => {
       <TaroifyButton color="primary" size="small">
         主要按钮
       </TaroifyButton>
+      <SmileCommentOutlined size={40} />
+      <IconFont name="home" size={40} />
     </View>
   )
 }

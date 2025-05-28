@@ -10,3 +10,4 @@ dist
 *.lock
 yarn-error.log
 public
+src/assets
