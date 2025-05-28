@@ -2,7 +2,7 @@
   "miniprogramRoot": "dist/",
   "projectname": "wechat-template-taro",
   "description": "",
-  "appid": "wxc1b4b8a29f8568dd",
+  "appid": "touristappid",
   "setting": {
     "urlCheck": true,
     "es6": true,
