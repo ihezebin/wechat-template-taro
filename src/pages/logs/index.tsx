@@ -1,9 +1,8 @@
 import { View } from '@tarojs/components'
-import React from 'react'
 
 import { useStore } from '../../store'
 
-import styles from './logs.module.scss'
+import styles from './index.module.scss'
 
 const Logs = () => {
   const { token } = useStore()

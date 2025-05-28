@@ -1,4 +1,9 @@
 view {
-    font-family: 'Kaiti SC', 'Songti SC', 'PingFang SC', cursive, sans-serif;
-    box-sizing: border-box;
-  }
+  font-family: 'Kaiti SC', 'Songti SC', 'PingFang SC', cursive, sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+page {
+  overflow: hidden; // 重要！避免托底白边
+}

@@ -6,12 +6,11 @@ import React, { useEffect } from 'react'
 
 import api from '../../api'
 import { useStore } from '../../store'
-import createErrorBoundary from '../../utils/createErrorBoundary'
 import IconFont from '../../components/IconFont'
 
 import styles from './index.module.scss'
 
-const Index = () => {
+const Home = () => {
   const { setToken } = useStore()
 
   useEffect(() => {
@@ -42,13 +41,11 @@ const Index = () => {
         Taro Button
       </Button>
 
-      <TaroifyButton color="primary" size="small">
-        主要按钮
-      </TaroifyButton>
+      <TaroifyButton color="primary">主要按钮</TaroifyButton>
       <SmileCommentOutlined size={40} />
       <IconFont name="home" size={40} />
     </View>
   )
 }
 
-export default createErrorBoundary(Index)
+export default Home

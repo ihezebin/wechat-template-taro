@@ -1,7 +1,7 @@
 import { View } from '@tarojs/components'
 import { Empty } from '@taroify/core'
 
-import styles from './error.module.scss'
+import styles from './index.module.scss'
 
 type ErrorProps = {
   error?: Error | null

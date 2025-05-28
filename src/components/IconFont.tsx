@@ -7,7 +7,7 @@ type IconFontProps = {
 }
 
 const IconFont = (props: IconFontProps) => {
-  return <Icon classPrefix="blog" name={props.name} size={props.size} />
+  return <Icon classPrefix="blog" name={props.name} size={props.size || 26} />
 }
 
 export default IconFont

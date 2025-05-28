@@ -1,6 +1,6 @@
 import { Component, ComponentType } from 'react'
 
-import Error from '../pages/error/error'
+import Error from '../pages/error'
 
 const createErrorBoundary = (Page: ComponentType) => {
   return class ErrorBoundary extends Component {
