@@ -1,13 +1,13 @@
-import { Switch, View } from '@tarojs/components'
-import { Button } from '@nutui/nutui-react-taro'
-import './index.scss'
+import { View, Button } from '@tarojs/components'
 import Taro, { usePullDownRefresh } from '@tarojs/taro'
+import { Button as TaroifyButton } from '@taroify/core'
 import React, { useEffect } from 'react'
 
 import api from '../../api'
 import { useStore } from '../../store'
-import createWithConfigProvider from '../../utils/configProvider'
 import createErrorBoundary from '../../utils/createErrorBoundary'
+
+import styles from './index.module.scss'
 
 const Index = () => {
   const { setToken } = useStore()
@@ -28,25 +28,23 @@ const Index = () => {
   })
 
   return (
-    <View className="nutui-react-demo">
-      <View className="index">欢迎使用 NutUI React 开发 Taro 多端项目。</View>
-      <View className="index">
-        <Button
-          fill="dashed"
-          type="primary"
-          className="btn"
-          onClick={() => {
-            Taro.navigateTo({
-              url: '/pages/my/my?id=2&type=test',
-            })
-            console.log('navigateTo')
-          }}>
-          NutUI React Button
-        </Button>
-        <Switch defaultChecked />
-      </View>
+    <View className={styles.index}>
+      <View>欢迎使用 React 开发 Taro 多端项目。</View>
+      <Button
+        onClick={() => {
+          Taro.switchTab({
+            url: '/pages/my/my',
+          })
+          console.log('switchTab')
+        }}>
+        Taro Button
+      </Button>
+
+      <TaroifyButton color="primary" size="small">
+        主要按钮
+      </TaroifyButton>
     </View>
   )
 }
 
-export default createWithConfigProvider(createErrorBoundary(Index))
+export default createErrorBoundary(Index)

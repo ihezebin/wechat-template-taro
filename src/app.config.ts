@@ -14,6 +14,7 @@ export default defineAppConfig({
     backgroundColor: '#fff',
     borderStyle: 'black',
     position: 'bottom',
+    custom: true,
     list: [
       {
         text: '首页',

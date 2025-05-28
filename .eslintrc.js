@@ -32,11 +32,11 @@ module.exports = {
     'unused-imports/no-unused-imports': 'error',
   },
   settings: {
-    // 'import/resolver': {
-    //   node: {
-    //     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    //     moduleDirectory: ['node_modules', 'src'],
-    //   },
-    // },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', 'src'],
+      },
+    },
   },
 }

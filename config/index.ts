@@ -5,10 +5,6 @@ const config = {
   projectName: 'wechat-template-taro',
   date: '2025-4-8',
   designWidth(input) {
-    // 配置 NutUI 375 尺寸
-    if (input?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
-      return 375
-    }
     // 全局使用 Taro 默认的 750 尺寸
     return 750
   },
@@ -39,12 +35,6 @@ const config = {
       })
     },
     postcss: {
-      pxtransform: {
-        enable: true,
-        config: {
-          selectorBlackList: ['nut-'],
-        },
-      },
       url: {
         enable: true,
         config: {
@@ -63,7 +53,7 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
-    // esnextModules: ['nutui-react'],
+    esnextModules: ['@taroify'],
     postcss: {
       pxtransform: {
         enable: true,

@@ -14,15 +14,23 @@ module.exports = {
     [
       'import',
       {
-        libraryName: '@nutui/nutui-react-taro',
-        style: 'css',
-        libraryDirectory: 'dist/esm',
-        camel2DashComponentName: false,
-        customName: (name, file) => {
-          return `@nutui/nutui-react-taro/dist/es/packages/${name.toLowerCase()}`
-        },
+        libraryName: '@taroify/core',
+        libraryDirectory: '',
+        style: true,
       },
-      'nutui-react-taro',
+      '@taroify/core',
+    ],
+    [
+      'import',
+      {
+        libraryName: '@taroify/icons',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+        style: () => '@taroify/icons/style',
+        customName: (name) =>
+          name === 'Icon' ? '@taroify/icons/van/VanIcon' : `@taroify/icons/${name}`,
+      },
+      '@taroify/icons',
     ],
   ],
 }

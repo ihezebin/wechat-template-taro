@@ -1,21 +1,10 @@
-import { useEffect } from 'react'
-import { useDidShow, useDidHide, useLaunch, useError } from '@tarojs/taro'
+import { useLaunch, useError } from '@tarojs/taro'
+
 // 全局样式
-import '@nutui/nutui-react-taro/dist/styles/themes/default.css'
 import './assets/iconfont/iconfont.css'
 import './app.scss'
 
-const App = (props) => {
-  // 可以使用所有的 React Hooks
-  useEffect(() => {
-    // todo
-  })
-
-  // 对应 onShow
-  useDidShow(() => {
-    // todo
-  })
-
+const App = ({ children }) => {
   useLaunch(() => {
     // todo
   })
@@ -24,12 +13,7 @@ const App = (props) => {
     console.error('error:', error)
   })
 
-  // 对应 onHide
-  useDidHide(() => {
-    // todo
-  })
-
-  return props.children
+  return children
 }
 
 export default App

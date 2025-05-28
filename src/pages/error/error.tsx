@@ -1,7 +1,5 @@
-import { Image, View } from '@tarojs/components'
-import { Empty } from '@nutui/nutui-react-taro'
-
-import SleepCat from '../../assets/images/cat/sleep.png'
+import { View } from '@tarojs/components'
+import { Empty } from '@taroify/core'
 
 import styles from './error.module.scss'
 
@@ -12,10 +10,10 @@ type ErrorProps = {
 const Error = ({ error }: ErrorProps) => {
   return (
     <View className={styles.error}>
-      <Empty
-        description={`出现错误：${error?.message}`}
-        image={<Image style={{}} src={SleepCat} />}
-      />
+      <Empty>
+        <Empty.Image src="error" />
+        <Empty.Description>{error?.message || '发生未知错误'}</Empty.Description>
+      </Empty>
     </View>
   )
 }
